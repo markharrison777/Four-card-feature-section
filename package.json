@@ -1,0 +1,15 @@
+{
+  "name": "four-card-feature-section-master",
+  "version": "1.0.0",
+  "description": "This is a frontend mentor challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss/main.scss -o css/main.min.css "
+  },
+  "author": "Markus Harrison",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
