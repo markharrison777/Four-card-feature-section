@@ -1,0 +1,52 @@
+// *********************** Variables *******************************
+
+$bodyBg: #ffffff;
+$mainFont: "Poppins", sans-serif;
+$mainFont-size: 11px;
+$font-color: #9e9ea0;
+$bold-fontColor: #515266;
+
+// ********************** GLOBAL Styles *****************************
+
+body {
+  background: $bodyBg;
+  font-family: $mainFont;
+  color: $font-color;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 11px;
+  width: 100%;
+}
+
+// ********************** LOCAL Styles ******************************
+//         ***************** header **************************
+.header {
+  display: grid;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 4rem auto;
+  width: 50%;
+  word-spacing: 0.1em;
+
+  &__h1 {
+    justify-self: center;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &__h1--bold {
+    justify-self: center;
+    color: $bold-fontColor;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__p {
+    font-size: 13px;
+    font-weight: 400;
+    width: 65%;
+    margin: 1em auto;
+  }
+}
