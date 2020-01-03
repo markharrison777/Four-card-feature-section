@@ -2,9 +2,9 @@
 
 $bodyBg: #ffffff;
 $mainFont: "Poppins", sans-serif;
-$mainFont-size: 11px;
-$font-color: #9e9ea0;
-$bold-fontColor: #515266;
+$mainFont-size: 15px;
+$font-color: hsl(229, 6%, 66%);
+$bold-fontColor: hsl(234, 12%, 34%);
 
 // ********************** GLOBAL Styles *****************************
 
@@ -14,8 +14,12 @@ body {
   color: $font-color;
   text-align: center;
   box-sizing: border-box;
-  font-size: 11px;
+  font-size: $mainFont-size;
   width: 100%;
+}
+
+.wrapper {
+  max-width: 1440px;
 }
 
 // ********************** LOCAL Styles ******************************
@@ -24,8 +28,8 @@ body {
   display: grid;
   text-align: center;
   box-sizing: border-box;
-  margin: 4rem auto;
-  width: 50%;
+  margin: 3rem auto;
+  width: 100%;
   word-spacing: 0.1em;
 
   &__h1 {
@@ -44,9 +48,79 @@ body {
   }
 
   &__p {
-    font-size: 13px;
     font-weight: 400;
-    width: 65%;
+    width: 39%;
     margin: 1em auto;
   }
+}
+
+//  ************************** cards ***************************
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 20%);
+  grid-template-rows: 1fr;
+  align-content: center;
+  justify-content: center;
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
+  box-sizing: border-box;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border-radius: 3px;
+    text-align: left;
+    font-size: 11px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding: 1em;
+    // **** card header ****
+    .main__card-header {
+      color: $bold-fontColor;
+      font-size: 15px;
+    }
+  }
+
+  .main__card-team_builder {
+    border-top: 3px solid hsl(0, 78%, 62%);
+    grid-row: 2 / 2;
+    grid-column: 2 / 2;
+    justify-self: center;
+  }
+
+  .main__card-supervisor {
+    border-top: 3px solid hsl(180, 62%, 55%);
+    grid-row: 4 / 2;
+    align-self: center;
+    height: 212px;
+  }
+
+  .main__card-calculator {
+    border-top: 3px solid hsl(212, 86%, 64%);
+    align-self: center;
+    grid-column: 3;
+    grid-row: 4 / 2;
+  }
+
+  .main__card-karma {
+    border-top: 3px solid hsl(34, 97%, 64%);
+    grid-row: 3 / 4;
+    grid-column: 2 / 2;
+  }
+
+  .main__card-img {
+    align-self: flex-end;
+    padding-top: 2em;
+    width: 50px;
+  }
+}
+
+footer {
+  margin-top: 3em;
 }
