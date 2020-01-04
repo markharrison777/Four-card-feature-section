@@ -28,22 +28,23 @@ body {
   display: grid;
   text-align: center;
   box-sizing: border-box;
-  margin: 3rem auto;
+  margin: 4em auto 1em auto;
   width: 100%;
   word-spacing: 0.1em;
 
   &__h1 {
     justify-self: center;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 200;
+    color: hsl(234, 12%, 34%);
     margin: 0;
   }
 
   &__h1--bold {
     justify-self: center;
-    color: $bold-fontColor;
     font-size: 25px;
     font-weight: 600;
+    color: $bold-fontColor;
     margin: 0;
   }
 
@@ -58,12 +59,12 @@ body {
 
 .main {
   display: grid;
-  grid-template-columns: repeat(3, 20%);
+  grid-template-columns: repeat(3, 22%);
   grid-template-rows: 1fr;
   align-content: center;
   justify-content: center;
-  grid-row-gap: 1em;
-  grid-column-gap: 1em;
+  grid-row-gap: 2em;
+  grid-column-gap: 2em;
   box-sizing: border-box;
   max-width: 1440px;
   width: 100%;
@@ -72,18 +73,22 @@ body {
   .cards {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 100%;
+    justify-content: space-around;
     border-radius: 3px;
     text-align: left;
     font-size: 11px;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px 0 rgba(152, 202, 252, 0.4);
     box-sizing: border-box;
-    padding: 1em;
+    padding: 1em 2em;
+
     // **** card header ****
     .main__card-header {
       color: $bold-fontColor;
       font-size: 15px;
+    }
+
+    .main__card-p {
+      margin-top: 0;
     }
   }
 
@@ -116,7 +121,7 @@ body {
 
   .main__card-img {
     align-self: flex-end;
-    padding-top: 2em;
+    padding: 1.5em 1em 1em 0em;
     width: 50px;
   }
 }
